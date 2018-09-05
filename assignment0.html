@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Assignment 0 - just play around with tensorflow</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"> </script>
+
+<body>
+    <div style>
+       <p> This example just plays with some basic tensorflow operations</p>
+    </div>
+
+    <!-- The script below runs a computation using a Tensor data
+    structure from Tensorflow.js.  The computation
+    runs on the computer's GPU (Graphics Processing Unit),
+    which is much faster than running on the CPU.  The speed
+    difference is irrelevant for this tiny example, but will
+    become critical for compute-intense applications like
+    training neural networks. -->
+
+    <script>
+       //create array and add random values to do some operation
+       const values= [];
+       const tfscalar= tf.scalar(10);
+       
+
+
+       for (let i=0; i<27; i++){
+           values[i]= Math.random(0,100);
+       }
+       
+       
+
+
+       //define tensor shape 3,9
+       const tshape= [3,9];
+
+        
+
+        //define the tensor 
+        const data = tf.tensor(values, tshape);
+       
+        const mult = data.mul(tfscalar);
+       
+        document.write("<p> Test array: " + mult);
+            
+
+
+    </script>
+</body>
+</html>
