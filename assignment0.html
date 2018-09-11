@@ -26,15 +26,11 @@
 
        for (let i=0; i<27; i++){
            values[i]= Math.random(0,100);
-       }
-       
-       
+       }     
 
 
        //define tensor shape 3,9
-       const tshape= [3,9];
-
-        
+       const tshape= [3,9];       
 
         //define the tensor 
         const data = tf.tensor(values, tshape);
