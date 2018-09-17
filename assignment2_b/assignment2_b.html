@@ -17,11 +17,11 @@
 <p><strong>PROBLEM 6	</strong></p>
 <p><strong>1- Look at some of the testing results and try to find examples of classifications where the system does poorly and is even wrong. When you see interesting results, document them on your webpage. </strong></p>
 <p>Answer- training with default values gives a really bad performance with a very poor accuracy. In the case of more complex digits such as 8s and 3s and in general curved digits, it has real problems performing in a good way with the default parameters. </p>
-<p><img src="..IMG/Screen Shot 2018-09-16 at 23.11.05.png" width="937" height="543" alt=""/></p>
+<p><img src="../IMG/Screen Shot 2018-09-16 at 23.11.05.png" width="937" height="543" alt=""/></p>
 <p><a href="code/index_Default_settings.js" title="Code Default Settings" target="new">Code</a></p>
 <p dir="ltr"><strong id="docs-internal-guid-f56ffb25-7fff-e8b7-9df1-66b8f2f8e618">2. Experiment with changing the batch size and the number of batches to try to improve the testing results. Give a brief description of what you tried, and the results.</strong></p>
 <p>Answer- By changing the default settings increasing the number of batch size to 50 and the number of batches to 200, we see a good improvement where the accuracy rises up to 90% and the erroneal predictions are way less than before. By giving more images for the model to see before updating values and adding more batches to train the model (50 and 200 respectively) shows that tunning those values could improve even more the performance. </p>
-<p><img src="..IMG/Screen Shot 2018-09-16 at 23.16.26.png" width="905" height="588" alt=""/></p>
+<p><img src="../IMG/Screen Shot 2018-09-16 at 23.16.26.png" width="905" height="588" alt=""/></p>
 <p>By changing other parameters and trying configurations always return similar results. </p>
 <div>
   <div>const BATCH_SIZE =64;</div>
@@ -98,7 +98,7 @@
     <div>const TEST_ITERATION_FREQUENCY = 5;</div>
   </div>
 </div>
-<p><img src="..IMG/Screen Shot 2018-09-16 at 23.39.59.png" width="907" height="413" alt=""/></p>
+<p><img src="../IMG/Screen Shot 2018-09-16 at 23.39.59.png" width="907" height="413" alt=""/></p>
 <p>&nbsp;</p>
 <p><a href="code/index_layersModA.js" title="Code Layers MOD a" target="new">Code</a><br>
 </p>
@@ -171,14 +171,14 @@
   <div>const TEST_ITERATION_FREQUENCY = 5;</div>
 </div>
 <p>Using these model and this set of Hyperparameters, the results are really good! (I followed the configuration that tensorflow.js page do for MNIST). </p>
-<p><img src="..IMG/Screen Shot 2018-09-17 at 00.04.58.png" width="855" height="452" alt=""/></p>
+<p><img src="../IMG/Screen Shot 2018-09-17 at 00.04.58.png" width="855" height="452" alt=""/></p>
 <p><a href="code/index_layersModB.js" title="CODE LAYER MOD B" target="new">CODE</a></p>
 <p>&nbsp;</p>
 <p>SAme code and configuration applied to the Fashion -Mnist mdoel shows worst results. </p>
-<p><img src="..IMG/Screen Shot 2018-09-17 at 00.23.34.png" width="884" height="428" alt=""/></p>
+<p><img src="../IMG/Screen Shot 2018-09-17 at 00.23.34.png" width="884" height="428" alt=""/></p>
 <p>&nbsp;</p>
 <p>By using the same model with the CIFAR-10 Dataset, the results are really bad. the model overfits and can perform in a decent way. </p>
-<p><img src="..IMG/Screen Shot 2018-09-17 at 00.14.13.png" width="901" height="429" alt=""/></p>
+<p><img src="../IMG/Screen Shot 2018-09-17 at 00.14.13.png" width="901" height="429" alt=""/></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
