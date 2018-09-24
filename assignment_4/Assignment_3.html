@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Assignment 3</title>
+<style type="text/css">
+.consoles {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.consoles #docs-internal-guid-a8178a54-7fff-f7bf-8d4d-4428f9b8bce2 {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.consolas {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+#docs-internal-guid-0d0b605d-7fff-54f0-96a3-3379c1a1df44 {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqq {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqq {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqq strong {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqqqq {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqqqq brqqqq {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqqqq h1 br {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+que {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+asdasd {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqqqq h1 strong {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+.qqqqq pre #docs-internal-guid-41d2b1d1-7fff-39b2-aec6-1304b19738b1 {
+	font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+}
+</style>
+</head>
+
+<body class="qqqqq">
+<p class="consoles">ASSIGNMENT 3</p>
+<p class="consoles"><strong id="docs-internal-guid-a8178a54-7fff-f7bf-8d4d-4428f9b8bce2">1.4: Visualizing convolutional neural networks</strong></p>
+<p class="consolas">Interesting observations about the results from using the demo.</p>
+<p class="consolas"><img src="IMG/IMG_0383.PNG" width="594" height="792" alt=""/> <img src="IMG/IMG_0385.PNG" width="594" height="792" alt=""/><img src="IMG/IMG_0385.PNG" width="594" height="792" alt=""/><img src="IMG/IMG_0386.PNG" width="594" height="792" alt=""/><img src="IMG/IMG_0387.PNG" width="594" height="792" alt=""/><img src="IMG/IMG_0388.PNG" width="594" height="792" alt=""/><img src="IMG/IMG_0389.PNG" width="594" height="792" alt=""/><img src="IMG/IMG_0390.PNG" width="594" height="792" alt=""/></p>
+<p class="consolas">&nbsp;</p>
+<p class="consolas">By playing with the tool in an ipad pro, I can see that it performs really well even when I try to cheat the program by drawing numbers in a imprecise way. Almost every time it guessed the number correctly. Because images are not complex and in general only B/W pixels compose the image, I guees that capturing the spatial patterns in data is far more easy for this CNN than working with more complex datasets.  
+</p>
+<p>&nbsp;</p>
+<p><strong id="docs-internal-guid-a8178a54-7fff-f7bf-8d4d-4428f9b8bce">3.5 Fast style transfer</strong></p>
+<p class="qqq">1. What happens when you pass an image through the same filter several times? Do you observe any interesting characteristics or padding artifacts?</p>
+<p class="qqq">it is interesting how, by repeating the procedure of style transfer on the same image with the same filter, it looses not resolution but definition. By repeating the procedure it produces a 'blur' effect in details. In this case, by using the stata center, it is clear how some architectural details still visible in the first applciation of the style transfer, are blurred and tottaly dissapear in a third iteration. </p>
+<p class="qqq"><img src="IMG/3-5a/faststyletransfer0.png" width="917" height="785" alt=""/></p>
+<p class="qqq"><img src="IMG/3-5a/faststyletransfer1.png" width="954" height="778" alt=""/><img src="IMG/3-5a/faststyletransfer3.png" width="901" height="774" alt=""/></p>
+<p class="qqq"><img src="IMG/3-5a/faststyletransfer4.png" width="881" height="777" alt=""/></p>
+<p class="qqq">&nbsp;</p>
+<p class="qqq">&nbsp;</p>
+<p class="qqq"><strong id="docs-internal-guid-a384d885-7fff-fe3a-8da5-4ba51ef173e0">2. Apply a filter to an image and then apply another filter to that already-filtered image. Is the result similar to what you would get when you apply the second filter to the original image?</strong></p>
+<p class="qqq">The results are similar. Nevertheless, the same thing that happened with the previous test. the image loose some details and structure after the application of the first filter . It shows some artifacts after applying some styles to the processed image. </p>
+<p class="qqq"><img src="IMG/3-5b/Screen Shot 2018-09-22 at 11.07.31.png" width="936" height="763" alt=""/></p>
+<p class="qqq">&nbsp;</p>
+<p dir="ltr"><strong id="docs-internal-guid-b719cbcf-7fff-368a-c19a-9dc3a00ad30d">3. Try different combinations of filters and number of times you filter an image. Note on your website if you have any interesting observations or insights.</strong></p>
+<p>in the second of the previous image, it is possible to see that after applying different filters to the same image it looses some of the key feratures and stsart showing some noticeable artifacts. </p>
+<p><span class="qqq"><img src="IMG/3-5b/scarlet.png" width="1658" height="833" alt=""/></span></p>
+<h1 dir="ltr"><strong id="docs-internal-guid-249dcf16-7fff-2b0a-f2d7-55de9f4a7b58">3.6: Building CNNs with code </strong></h1>
+<p dir="ltr">1- try changing the learning rate, batch size and number of batches. make sure that these numbers are reasonable to start </p>
+<p dir="ltr">The system performs really bad and can't get more than 40 % after playing with some parameters such as the batch size and the test batch size. Here I tried increasing the batch size to high numbers (from 64 to 1024), stressing my computer but getting results much faster and more accuracy over time. The problem is that the computer got really slow and crashed after a while (using almost all my 32 gb of ram).</p>
+<p dir="ltr"><img src="IMG/CODe part images/settings.jpg" width="773" height="207"></p>
+<p dir="ltr">2. Try changing some of the other parameters like field size, stride, output, …</p>
+<p dir="ltr">changing other parameters, made some small differences in the learning accuracy. it was faster when I increased the filters and tuned some parameters such as the strides. Still hard to tell if it made some major changes in performance.  </p>
+<p dir="ltr"><img src="IMG/CODe part images/2.png" width="780" height="332"><img src="IMG/CODe part images/3.png" width="736" height="335"></p>
+3. Do you have a hypothesis for why CIFAR-10 is so much harder to train on than Fashion MNIST and MNIST (i.e. it&rsquo;s more difficult to achieve a 90%+ accuracy) while Fashion MNIST has similar training times to MNIST (even though Fashion MNIST is more complex than MNIST)?<br>
+<p dir="ltr">My guess is that training images with more &quot;information&quot; -in this case color- makes the search for spatial pattern matching much more difficult needing more layers and 'fine tunning tricks' to manage in an efficient way the training. Reading papers that achieved a better performance https://arxiv.org/pdf/1412.6806.pdf or https://arxiv.org/abs/1511.06422 expose different techniques to get over 90% of accuracy such as replacing maxpooling with another convolution layer with increased stride. </p>
+<p dir="ltr">4. How does adding more convolutional layers relate to accuracy and training speed? Is there a point at which adding more layers plateaus or even decreases the maximum accuracy you are able to achieve with that model?</p>
+<p dir="ltr">In my case it doesn't and for some reason I had many problems trying to debug my code because of errors I couln't solve that using python didn't happen. </p>
+<p dir="ltr">5. Challenge: Are you able to find an architecture/combination of techniques that can get you to 60% accuracy on CIFAR-10 within 1 minute of training? 5 minutes? 10 minutes?</p>
+<p dir="ltr">No, using my code and playing with parameters I only got 60% accuracy running my model all night long on my desktop pc. Increasing the batch size to high numbers such as 1024 stressed the computer but in the end gave me better results with my code. </p>
+<p dir="ltr">CODE</p>
+<p dir="ltr"><a href="CODE/Code.js" title="CODE 1" target="new">CODE 1</a></p>
+<p dir="ltr"><a href="CODE/Code2_finaltraining.js" title="Code 2" target="new">CODE 2</a></p>
+	
+	
+<br>
+</body>
+</html>
