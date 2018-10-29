@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Assignment 7</title>
+</head>
+
+<body>
+<div>
+  <p><strong> ASSIGNMENT 7 -  RNN and LSTMs </strong></p>
+  <p><strong> 1. LSTMs consist of chained, repeating modules. At a high level, what are the two pieces of information that is passed between modules? </strong></p>
+	  <p> At a high level , LSTM passes information between modules through gates. These regulate the ability of the LSTM to add or remove information to determine the cell state. </p>
+	  <p>&nbsp;</p>
+	  <p><strong> 2. "LSTM" stands for "Long Short Term Memory". The name is a reference to a problem with RNNs that LSTMs are designed to solve. What is this problem? At a high level, how do LSTMs attempt to address this problem (what extra information do they add)?
+	    
+	    The problem is that RNNs have problems with long term dependencies. They can pass the information through layers but are incapable of learning. Hence, in the presence of gaps between relevant pieces of information, RNNs do not have the possibility to connect information that is not immediately recent. LSTM add a special core feature to RNNs’s similar structure, that is the cell state which through the use of three gates, regulates the information that is added or removed to the cell state that let in the end pass the information through the whole network.</strong></p>
+	  <p>3. The blog post describes two views of RNN/LSTM architectures. In one of these views, we think of the RNN as being "unrolled" into a chain of repeating modules. What values (represented with tensors) are shared between these modules, and what values are different? (The answer is slightly confusing when thinking about training, so just think about using the model for prediction.)
+	    
+	    No idea, be cause the question is confusing. Is the answer "the weights?"
+	  </p>
+	  <p><strong>4. The "forget gate layer" has four steps: 
+	    A. Concatenate the previous output and current input. 
+	    B. Run a normal fully connected layer (where we multiply these values by a weight matrix). 
+	    C. Take the output of the fully connected layer, and run it through a sigmoid non-linearity. 
+	    D. Set new_state = the output of the sigmoid non-linearity * current_state.
+	    Remember that the purpose of the "forget gate layer" is to allow the network to "forget" some of the current state. Why do you think a sigmoid non-linearity is used here instead of a ReLU nonlinearity (as we were using in most of our previous models)? Hint: look at this image visualizing sigmoid and ReLU https://goo.gl/URp7Hm. Think about the ranges of the output - what is the property of sigmoid's output range that makes it work for our purpose when we multiply with the current state vector?</strong></p>
+	  <p> Because Lstm don’t have the vanishing gradient problem that other NN have. Using Sigmoid for the gates as the activation function lets LSTMs to sustain for a long range the values before going to Zero. </p>
+  <p>&nbsp;</p>
+  <p><strong>Part 2 -  complete the code </strong></p>
+  <p>2.1Complete the code - Done!</p>
+  <p><img src="img/2-1.jpg" width="1200" height="548"></p>
+  <p>2.2 - Run the model. </p>
+  <p>After 15 epochs</p>
+  <p><img src="../../../../../../Desktop/PhD_MIT/MIT/CLASSES/Deeplearn/assignment7/IMG/Screen Shot 2018-10-25 at 13.01.30.png" width="1200" height="488" alt=""/></p>
+  <p>&nbsp;</p>
+  <p>After 16 epochs tuning some parameters. <img src="img/01.PNG" width="1200" height="616" alt=""/></p>
+  <p>&nbsp;</p>
+  <p>After 900 + epochs ans better tuned parameters - it finally returns more coherent things. For me , setting the perplexity between 0.7 ~ 0.8 worked better in order to avoid typos and to avoid to many repetitions.</p>
+  <p><img src="img/02.PNG" width="1200" height="605" alt=""/></p>
+  <p>&nbsp;</p>
+  <p>&nbsp; </p>
+  <p>
+    
+  </p>
+	</div>
+<p>3 Music generation with Tensorflow</p>
+<p>3.1 Go through all the TO DO implementation in the code. </p>
+<p>Done, although , for some reason I had random success when running the Jupyter notebook. I decided to use GPU version of tensorflow and sometimes it worked , sometimes it didn't. After many attempts I just decided to move directly to python code.</p>
+<p>After trying to use some CUDA implementations for tensorflow that supossedly work faster, I failed misserably, so I stick to the regular implementations of the code. For example, the suggested function rnn.BasicLTMCell is deprecated and at the tensorflow documentation the function tf.nn.rnn_cell.LSTMCELL is suggested. After reading a bit about this function, in order to generate a better performance, the function tf.contrib.cudnn_rnn.CudnnLSTM is suggested, I couln'd get it to work (it returned every time an exception) :(</p>
+<p><a href="CODE/Music_RNNs.py">Completed code</a></p>
+<p>the generated songs are this. </p>
+<p>I tried to vary the training time and also play with the suggested values. Using GPU (GTX 1070ti) worked really fast compared to CPU. </p>
+<p>After 20 epochs</p>
+<p><a href="generated/bla.mid">Song1</a></p>
+<p>After 1000 epochs</p>
+<p><a href="generated/ble.mid">Song2</a></p>
+<p>After 10000 epochs</p>
+<p><a href="generated/bli.mid">Song3</a></p>
+<p>After 100000 epochs</p>
+<p><a href="generated/blo.mid">Song4</a></p>
+<p>After 10000000 epochs (weird result, shorter and not very interesting)</p>
+<p><a href="generated/blu.mid">Song5</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	
+
+</body>
+</html>
